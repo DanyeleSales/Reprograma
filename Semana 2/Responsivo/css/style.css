@@ -1,0 +1,171 @@
+/*GERAL*/
+*{
+    box-sizing: border-box;
+    font-family:"Open Sans",Arial, Helvetica, sans-serif;
+}    
+
+.all{
+    color:#4a4a4a;
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+.header{    
+    color: #9013FE;
+    font-weight: 800;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-top: 10%;
+}
+/*ASIDE*/
+.Perfil_autor{
+    display: inline-block;
+    border: #4a4a4a 1px solid;
+    width: 20%;
+    height: 530px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 14px;
+    }
+.detalhe_perfil{
+    width: 80%;
+    margin: 0 auto;
+}
+/*MAIN*/
+.Posts{
+    display: inline-block;
+    width: 70%;
+    height: 530px;
+    vertical-align: top;
+    margin-left: 30px;
+}
+
+.Posts img{
+    width: 100%;
+}
+
+.Perfil_autor img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+
+}
+.nome{
+    font-weight: 800;
+}
+h1{
+    font-size: 36px;
+}
+h1:hover{
+    color:#9013FE;
+}
+h2{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+ .navmae{
+    position: fixed;
+    background: white;
+    width: 100%;
+    top:0;
+    box-shadow: 0 1px 1px;
+} 
+
+
+.container{
+    display: inline-block;
+    margin-left: 200px;
+}
+/* @media( max-width:1200px){
+    .container{
+    width: 30%;
+    }
+} */
+ .imagem_logo{
+     display: inline-block;
+     margin-top: 15px;  
+ }
+ .lista{
+ display: inline-block;
+ margin-left: 500px;
+ }
+ ul{
+     list-style: none;
+ }
+ .container ul{
+     top:-20px;         
+ }
+ .container li{
+    display: inline-block;
+    text-align:right;
+    padding:10px;
+    margin:4px; 
+ }
+.tudão{
+    margin-top: 150px;
+}
+/*FOOTER*/
+footer {
+    text-align: center;
+    margin: 20px auto;
+    padding:5px;
+}
+.Rodape{
+    background-color: lavenderblush;
+}
+
+/* Aqui é para que o perfil do autor não apareça na page*/
+@media ( max-width:420px){
+    .navmae{
+        display: none;
+        width: 30%;
+        /* background: green; */
+        box-shadow: none;
+        }
+.Perfil_autor {
+    background: yellow;
+    display: none;
+}
+.lista{
+    width:50%;
+    display: inline-block;
+}
+.imagem_logo{
+    width: 20%;
+    /* display: inline-flex; */
+}
+.Posts{
+    /* font-size: 15px; */
+    margin: 0 auto;
+    width:100%;
+    /* color: blue; */
+}
+/* 
+.tudao{
+    margin-top: 2px;
+} */
+h1{
+    font-size: 22px;
+}
+h2{
+    font-size: 19px;
+}
+.container {
+    display:none;
+    margin-left: none;
+    }
+
+}
+@media( max-width:1200px){
+    .Rodape {
+        background: pink;
+        display: none;
+    }
+}
