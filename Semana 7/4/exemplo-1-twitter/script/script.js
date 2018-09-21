@@ -1,10 +1,18 @@
-const inputTwuit = document.getElementById("tweetComposerInput")
+const inputTweet = document.getElementById("tweetComposerInput")
 const button = document.querySelector(".tweet-composer__button")
 
 button.addEventListener("click", function (event) {
     event.preventDefault();
 
-    const div = document.createElement("div")
+    const date = new Date ();
+    const month = date.toLocaleString("pt-br", {month: "short"})
+    const day = date.getDate();
+
+    const dateHTML = document.createElement("span");
+    dateHTML.className = "tweets-timeline__username"
+    dateHTML.innerHTML = ` ${day} de ${month}`;
+
+    const div = document.createElement("div");
     div.className = "tweets-timeline__box"
 
     const header = document.createElement("div");
@@ -17,19 +25,18 @@ button.addEventListener("click", function (event) {
 
     const userName = document.createElement("span");
     userName.className = "tweets-timeline__username"
-    userName.innerHTML = " @Danysales";
+    userName.innerHTML = " @Danyeelsales ";
 
-
-     const footer = document.createElement("div");
-     footer.className = "tweets-timeline__delete-button"
-     footer.innerHTML = `<button class = "tweets-timeline__delete-button">Excluir</button>`
+    const footer = document.createElement("div");
+    footer.className = "tweets-timeline__delete-button"
+    footer.innerHTML = `<button class = "tweets-timeline__delete-button">Excluir</button>`
      
     header.appendChild(name)
     header.appendChild(userName)
-    
+    header.appendChild(dateHTML)
 
     const newTweet = document.createElement("p");
-    newTweet.innerHTML = inputTwuit.value;
+    newTweet.innerHTML = inputTweet.value;
 
     div.appendChild(header)
     div.appendChild(newTweet)
@@ -44,10 +51,30 @@ button.addEventListener("click", function (event) {
         div.remove();
     })
    
-
-    inputTwuit.value = null;
+    inputTweet.value = null;
 
 })
 
+inputTweet.addEventListener("keyup", function (evento) {
+    evento.preventDefault();
+    const textBox = this;
+    const maxLength = 280;
+    const count = document.getElementById("tweetComposerCounter");
 
-//newTweet.className = "tweets-timeline__box";
+    count.innerHTML = maxLength-textBox.value.length;
+
+    if (count.innerHTML <= 15){
+        count.style.color = `red`;
+    }
+    else {
+        count.style.color = "white"
+    }
+
+    if(count.innerHTML < 0 ){
+        button.disabled = true;
+    }
+    else{
+        button.disabled = false;
+    }
+    
+})
