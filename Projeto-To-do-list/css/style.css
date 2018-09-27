@@ -1,0 +1,159 @@
+/* GERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+  
+    background-image: linear-gradient(to right, #e0c3fc, #8ec5fc)
+}
+
+.container{
+    width: 300px;
+    margin: 121px auto -88px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* FORM */
+header{
+    font-size: 0,5em;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: gray 1px solid;
+}
+
+.tarefa-composer__form-group{
+    position: relative;
+    width: 100%;
+}
+
+.tarefa-composer__label{
+    display: block;
+}
+
+.tarefa-composer__input{
+    align-items: center;
+    border: 1px solid #ffffff;
+    height: 93px;
+    padding: 27px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: -10px;
+    
+}
+
+.tarefa-composer__button {   
+    width: 100%;
+    border: 0;
+    padding: 10px 20px;        
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #ba7af8;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tarefa-composer__button:hover{
+    background-color: #bda4d6;
+    transition: 0.3s;
+}
+
+.tarefas-caixa{
+    height: 55%;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.tarefas{
+    background-color: #ffffff;    
+    padding: 10px 20px;
+    align-items: center;
+    display: flex;
+    align-content: space-around;
+    border-bottom: lightgray 1px solid;
+}
+
+.tarefa-texto{
+    margin-left: 5px;
+    width: 96%;
+    font-weight: bold;
+    font-size: 14px;
+        
+}
+
+.tarefa-texto.checked{
+    color: gray;
+    text-decoration: line-through;
+   
+}
+
+.tarefa-lista__delete-button{
+    color: black;
+    background-color: white;
+    border: white;
+}
+
+footer{
+    width: 300px;
+    display: flex;
+    align-content: space-between;
+    border-top: lightgray 1px solid;
+    height: 35px;
+    align-items: center;
+    margin: 86px auto -77px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tarefa-lista__remove-button{
+    border: red;
+    color: white;
+    flex: space-between;
+    background-color: #c74646;
+    height: 34px;
+    margin-left: 0px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarefa-lista__remove-button:hover{
+    background-color: #f06d6d;
+    transition: 0.3s;
+    color:#b81f1f;
+}
+
+.tarefa-lista__completed-button{    
+    border: green;
+    color: white;
+    flex: space-between;
+    background-color: #277249;
+    height: 34px;
+    margin-left: 0px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarefa-lista__completed-button:hover{
+    background-color: #45ca81;
+    transition: 0.3s;
+    color: #277249; 
+}
+
