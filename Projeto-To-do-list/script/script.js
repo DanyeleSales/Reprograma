@@ -1,3 +1,4 @@
+//chama o botão e o input
 const button = document.querySelector(".tarefa-composer__button")
 const inputTexto = document.getElementById("tarefaComposerInput")
 
@@ -24,7 +25,8 @@ button.addEventListener("click", function (event) {
     console.log("text")
     text.className = "tarefa-texto"
     text.innerHTML = inputTexto.value;
-    //cria o botão de excluir
+
+    //cria o botão de excluir um por um
     const buttonDelete = document.createElement("button")
     buttonDelete.className = "tarefa-lista__delete-button"
     buttonDelete.innerHTML = `<button class="tarefa-lista__delete-button">x</button>`
@@ -35,24 +37,24 @@ button.addEventListener("click", function (event) {
 
     //insere antes do ultimo elemento criado
     const tarefaLista = document.querySelector(".tarefas-caixa");
-    tarefaLista.insertBefore(div, tarefaLista.childNodes[0].nextSibling);
+    tarefaLista.insertBefore(div, tarefaLista.childNodes[0]);
 
     //limpar o campo de texto
     inputTexto.value = null;
 
-    //ação do botão excluir
+    //ação do botão excluir um por um
     const botaoExcluir = document.querySelector(".tarefa-lista__delete-button");
 
     botaoExcluir.addEventListener("click", function (event) {
         event.preventDefault();
         div.remove();
     })
-
+    //ação do check e uncheck
     text.addEventListener("click", function (event) {
         event.preventDefault();
         text.classList.toggle("checked")
         })
-
+    // ação do botão remover todos
     const tarefas = document.querySelector(".tarefas")
     const botaoRemover = document.querySelector(".tarefa-lista__remove-button");
 
@@ -61,7 +63,7 @@ button.addEventListener("click", function (event) {
         tarefas.remove();
     })
 })
-
+    //ação do botão concluir todos
     const botaoConcluir = document.querySelector(".tarefa-lista__completed-button");
 
     botaoConcluir.addEventListener("click", function (event) {
@@ -73,12 +75,4 @@ button.addEventListener("click", function (event) {
             i.classList.toggle("checked")
         }        
     })
-
-    function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-        console.log()
-    }
-
 
