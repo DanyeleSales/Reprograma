@@ -1,0 +1,11 @@
+.row-margin>div{
+  margin-bottom: 25px;
+}
+
+.progress{
+  height: 5vh;
+  margin: 7px;
+}
+.progress-bar {
+  margin-top: 3px;
+}
